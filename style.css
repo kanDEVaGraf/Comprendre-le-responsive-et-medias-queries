@@ -1,0 +1,70 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #333;
+}
+
+.box {
+    width: 100%;
+    height: 200px;
+    margin: 100px auto 0;
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+/**** 1. bien comprendre les medias min-width/maxwidth ****/
+
+@media screen /* screen = tous les écrans*/ and (max-width: 1000px){
+
+    /*On prend l'élément que l'on veut modifier*/
+
+    .box {
+    width: 400px;
+    height: 200px;
+    margin: 100px auto 0;
+    background: linear-gradient (to right, #9796f0, #fbc7d4);
+    }
+}
+
+/**** 2 Les ressources des medias queries ****/
+
+/* print speech screen */
+/* and only "," not */
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .box {
+        background: red;
+    }
+    
+}
+
+/**** 3 Pour faire du responsive sans utiliser les medias queries, il suffit d'utiliser min-width et max-width directement dans les éléments CSS ****/
+
+.box {
+    width: 60%;
+    min-width: 300px;
+    max-width: 700px;
+
+}
+
+/*** 4 Utiliser des unités relatives vh vw vmin vmax % ****/
+
+.box {
+    max-width: 40vw;
+}
+
+ /*** 5 Ne pas utiliser de flexbox / css grid ***/
+
+/*https://codepen.io/Ziratsu/pen/NWxqRLj
+https://codepen.io/Ziratsu/pen/rNxLLMQ
+https://codepen.io/Ziratsu/pen/ZEQBJEq*/
+
+
+
+
+
